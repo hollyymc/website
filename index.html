@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Holly McHugh – Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top menu bar -->
+  <header class="menubar">
+    <strong>Holly McHugh</strong>
+    <span>Portfolio</span>
+    <span class="spacer"></span>
+    <span id="clock"></span>
+  </header>
+
+  <!-- Name as the background (background image is assets/background.jpg) -->
+  <h1 class="bg-name">Holly<br>McHugh</h1>
+
+  <!-- Desktop folders = projects. Each one opens the window with the matching id. -->
+  <button class="folder" data-open="win-p1" style="left:55%; top:16%">
+    <span class="icon"><span class="emoji">📁</span><img src="icons/folder.png" alt="" onerror="this.parentNode.classList.add('placeholder');this.remove()"></span>
+    <span class="label">NLP Pipeline</span>
+  </button>
+  <button class="folder" data-open="win-p2" style="right:8%; top:42%">
+    <span class="icon"><span class="emoji">📁</span><img src="icons/folder.png" alt="" onerror="this.parentNode.classList.add('placeholder');this.remove()"></span>
+    <span class="label">CNN Depth Study</span>
+  </button>
+  <button class="folder" data-open="win-p3" style="left:26%; top:58%">
+    <span class="icon"><span class="emoji">📁</span><img src="icons/folder.png" alt="" onerror="this.parentNode.classList.add('placeholder');this.remove()"></span>
+    <span class="label">Knowledge Graph</span>
+  </button>
+
+  <!-- ============ WINDOWS ============ -->
+
+  <!-- Notes: About me / Skills -->
+  <section class="window" id="win-notes" hidden>
+    <div class="titlebar">
+      <span class="lights"><button class="close"></button><button class="min"></button><i class="max"></i></span>
+      <span class="title">Notes</span>
+    </div>
+    <div class="body notes">
+      <aside class="sidebar">
+        <button class="active" data-note="note-about">About me</button>
+        <button data-note="note-skills">Skills</button>
+      </aside>
+      <div class="content">
+        <article id="note-about" class="note">
+          <h2>About me</h2>
+          <p>Hi, I'm <strong>Holly McHugh</strong>, based in Amsterdam. I studied Artificial Intelligence at Vrije Universiteit (Intelligent Systems track) and I'm now starting a degree in Game &amp; Media Technology at Universiteit Utrecht.</p>
+          <p>I work as a data engineering student at Rewire, where I build cloud infrastructure and authentication for an AI-driven promotion optimisation platform. Outside of work and study, I'm a competitive rower.</p>
+        </article>
+        <article id="note-skills" class="note" hidden>
+          <h2>Skills</h2>
+          <ul>
+            <li><strong>Languages:</strong> Python, C++, SQL, HTML/CSS, R, JavaScript</li>
+            <li><strong>Cloud &amp; infrastructure:</strong> AWS, Terraform, GitLab CI/CD, VPC networking</li>
+            <li><strong>Tools &amp; libraries:</strong> Git, PyTorch, Matplotlib, Pandas, Jupyter, HuggingFace, NLTK</li>
+            <li><strong>AI &amp; ML:</strong> Machine learning, deep learning, NLP (text classification, NER, sentiment analysis)</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Word: CV -->
+  <section class="window" id="win-cv" hidden>
+    <div class="titlebar">
+      <span class="lights"><button class="close"></button><button class="min"></button><i class="max"></i></span>
+      <span class="title">CV.docx</span>
+    </div>
+    <div class="body">
+      <h2>Holly McHugh</h2>
+      <p>Amsterdam, The Netherlands</p>
+
+      <h3>Education</h3>
+      <p><strong>Universiteit Utrecht</strong> – Game &amp; Media Technology (2026–present)</p>
+      <p><strong>Vrije Universiteit</strong> – Artificial Intelligence (2023–2026)</p>
+      <ul>
+        <li>7.6 GPA, Intelligent Systems track</li>
+        <li>Data Structures &amp; Algorithms, Machine Learning, Software Design, Software Engineering Processes, Text Mining, Computational Intelligence, Databases, Linear Algebra &amp; Calculus</li>
+      </ul>
+
+      <h3>Experience</h3>
+      <p><strong>Working Student, Data Engineering</strong> – Rewire (Mar 2026–present)</p>
+      <ul>
+        <li>Contributed to the AIRPro promotion optimisation platform, implementing cloud infrastructure changes with Terraform and AWS networking while the platform was separated for different business entities.</li>
+        <li>Implemented Okta authentication in Go and made infrastructure improvements across development, acceptance and production environments.</li>
+        <li>Used GitLab CI/CD and collaborative Git workflows, regularly contributing through merge requests and code reviews.</li>
+        <li>Co-taught a module of GAIN's Data &amp; AI bootcamp and presented technical work at company-wide meetings.</li>
+      </ul>
+      <p><strong>Student Ambassador</strong> – Vrije Universiteit (Oct 2023–present)</p>
+      <ul>
+        <li>Worked at information fairs, open days and school visits for the AI BSc programme, presenting to prospective students and parents and leading campus tours.</li>
+      </ul>
+      <p><strong>Bar Manager &amp; Bartender</strong> – Levenslang (Oct 2023–Feb 2026)</p>
+      <ul>
+        <li>Progressed from bartender to bar manager, leading and coordinating a team during busy events.</li>
+      </ul>
+      <p><strong>Stage Hand</strong> – Crew Solutions (Jun 2024–Oct 2025)</p>
+      <ul>
+        <li>Set up and dismantled stages and event equipment as part of a technical crew.</li>
+      </ul>
+
+      <h3>Extracurricular</h3>
+      <p><strong>Competitive Rower</strong> (Sep 2025–present) – training 5–8 times a week alongside full-time study and part-time work.</p>
+
+      <p><a href="cv.pdf" download>⬇ Download full CV (PDF)</a></p>
+    </div>
+  </section>
+
+  <!-- Mail: opens the visitor's email app with the fields filled in -->
+  <section class="window" id="win-mail" hidden>
+    <div class="titlebar">
+      <span class="lights"><button class="close"></button><button class="min"></button><i class="max"></i></span>
+      <span class="title">New Message</span>
+    </div>
+    <form class="body mail" id="mail-form">
+      <label>To: <input value="holly.k.mchugh@gmail.com" readonly></label>
+      <label>Subject: <input name="subject" required></label>
+      <label>Your name: <input name="name" required></label>
+      <textarea name="message" rows="6" placeholder="Say hello..." required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- VS Code: project list -->
+  <section class="window dark" id="win-code" hidden>
+    <div class="titlebar">
+      <span class="lights"><button class="close"></button><button class="min"></button><i class="max"></i></span>
+      <span class="title">Projects – Visual Studio Code</span>
+    </div>
+    <div class="body notes">
+      <aside class="sidebar">
+        <small>EXPLORER</small>
+        <button data-open="win-p1">📄 nlp-pipeline.md</button>
+        <button data-open="win-p2">📄 cnn-depth.md</button>
+        <button data-open="win-p3">📄 knowledge-graph.md</button>
+      </aside>
+      <div class="content">
+        <h2>Welcome</h2>
+        <p>Pick a file on the left to open a project. You can also open the project folders on the desktop.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Terminal -->
+  <section class="window dark" id="win-terminal" hidden>
+    <div class="titlebar">
+      <span class="lights"><button class="close"></button><button class="min"></button><i class="max"></i></span>
+      <span class="title">Terminal</span>
+    </div>
+    <div class="body">
+      <pre>$ whoami
+holly
+
+$ cat interests.txt
+- artificial intelligence
+- games &amp; media technology
+- rowing
+
+$ _</pre>
+    </div>
+  </section>
+
+  <!-- Project windows (copy one of these to add another project) -->
+  <section class="window" id="win-p1" hidden>
+    <div class="titlebar">
+      <span class="lights"><button class="close"></button><button class="min"></button><i class="max"></i></span>
+      <span class="title">Comparative NLP Pipeline</span>
+    </div>
+    <div class="body">
+      <div class="shot">screenshot</div>
+      <p><em>Text Mining coursework</em></p>
+      <ul>
+        <li>Implemented a comparative NLP pipeline for topic classification, NER and sentiment analysis using classical methods and transformer-based models.</li>
+        <li>Evaluated model performance and the trade-offs between specialised and general-purpose language models.</li>
+      </ul>
+      <p class="tags"><span>Python</span><span>NLTK</span><span>HuggingFace</span></p>
+      <p><a href="https://github.com/hollyymc" target="_blank">More on GitHub →</a></p>
+    </div>
+  </section>
+
+  <section class="window" id="win-p2" hidden>
+    <div class="titlebar">
+      <span class="lights"><button class="close"></button><button class="min"></button><i class="max"></i></span>
+      <span class="title">CNN Depth on MNIST</span>
+    </div>
+    <div class="body">
+      <div class="shot">screenshot</div>
+      <p><em>Machine Learning coursework</em></p>
+      <ul>
+        <li>Designed and evaluated convolutional neural networks of varying depths using Python and PyTorch.</li>
+        <li>Analysed the trade-off between model depth, classification performance and inference time.</li>
+        <li>Worked in a team of five using Git and presented the findings in a structured report.</li>
+      </ul>
+      <p class="tags"><span>Python</span><span>PyTorch</span><span>Git</span></p>
+      <p><a href="https://github.com/hollyymc" target="_blank">More on GitHub →</a></p>
+    </div>
+  </section>
+
+  <section class="window" id="win-p3" hidden>
+    <div class="titlebar">
+      <span class="lights"><button class="close"></button><button class="min"></button><i class="max"></i></span>
+      <span class="title">Knowledge Graph &amp; Data Analysis</span>
+    </div>
+    <div class="body">
+      <div class="shot">screenshot</div>
+      <p><em>Knowledge &amp; Data coursework</em></p>
+      <ul>
+        <li>Built a semantic knowledge graph in RDF/OWL as a team, integrating multiple data sources to analyse anxiety disorders and risk factors.</li>
+        <li>Queried and analysed the data with SPARQL, GraphDB and Pandas, and visualised insights in Jupyter notebooks.</li>
+      </ul>
+      <p class="tags"><span>RDF/OWL</span><span>SPARQL</span><span>GraphDB</span><span>Pandas</span></p>
+      <p><a href="https://github.com/hollyymc" target="_blank">More on GitHub →</a></p>
+    </div>
+  </section>
+
+  <!--
+    ============ DOCK ============
+    Icons live in the icons/ folder. If an image is missing, the coloured emoji tile is shown instead.
+  -->
+  <nav class="dock">
+    <button data-open="win-mail" data-label="Mail">
+      <span class="icon" style="--c:#2f8cff"><span class="emoji">✉️</span><img src="icons/mail.png" alt="" onerror="this.parentNode.classList.add('placeholder');this.remove()"></span>
+    </button>
+    <button data-open="win-notes" data-label="Notes">
+      <span class="icon" style="--c:#ffd84a"><span class="emoji">📝</span><img src="icons/notes.png" alt="" onerror="this.parentNode.classList.add('placeholder');this.remove()"></span>
+    </button>
+    <button data-open="win-cv" data-label="CV">
+      <span class="icon" style="--c:#185abd"><span class="emoji">W</span><img src="icons/word.png" alt="" onerror="this.parentNode.classList.add('placeholder');this.remove()"></span>
+    </button>
+    <button data-open="win-code" data-label="Projects">
+      <span class="icon" style="--c:#2b7fd4"><span class="emoji">💻</span><img src="icons/vscode.png" alt="" onerror="this.parentNode.classList.add('placeholder');this.remove()"></span>
+    </button>
+    <button data-open="win-terminal" data-label="Terminal">
+      <span class="icon" style="--c:#222"><span class="emoji">⌨️</span><img src="icons/terminal.png" alt="" onerror="this.parentNode.classList.add('placeholder');this.remove()"></span>
+    </button>
+    <i class="divider"></i>
+    <a href="https://www.linkedin.com/in/h-mchugh/" target="_blank" data-label="LinkedIn">
+      <span class="icon" style="--c:#0a66c2"><span class="emoji">in</span><img src="icons/linkedin.png" alt="" onerror="this.parentNode.classList.add('placeholder');this.remove()"></span>
+    </a>
+    <a href="https://github.com/hollyymc" target="_blank" data-label="GitHub">
+      <span class="icon" style="--c:#24292f"><span class="emoji">🐙</span><img src="icons/github.png" alt="" onerror="this.parentNode.classList.add('placeholder');this.remove()"></span>
+    </a>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
